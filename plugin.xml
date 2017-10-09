@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="com.mrboss.com.mrboss.senderrinfo"
+      version="0.3.1">
+
+    <name>MrBoss SendErrInfo</name>
+    <description>MrBoss SendErrInfo Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,android,SendErrInfo</keywords>
+    <repo>https://github.com/ZhichengChen/cordova-plugin-android-myalert.git</repo>
+    <issue>https://github.com/ZhichengChen/cordova-plugin-android-myalert/issues</issue>
+
+    <js-module src="www/senderrinfo.js" name="SendErrInfo">
+        <merges target="navigator.SendErrInfo" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SendErrInfo">
+                <param name="android-package" value="com.mrboss.senderrinfo.SendErrInfo"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/SendErrInfo.java" target-dir="src/com/mrboss/senderrinfo" />
+
+    </platform>
+
+</plugin>
